@@ -5,4 +5,19 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="act_main_nav_tv_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/common_space_double</item>
+        <item name="android:paddingBottom">@dimen/common_space_double</item>
+        <item name="android:paddingLeft">@dimen/common_space_double</item>
+        <item name="android:paddingRight">@dimen/common_space_double</item>
+        <item name="android:background">@drawable/bg_act_main_nav_item</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:layout_marginBottom">@dimen/common_line_size</item>
+        <item name="android:layout_marginTop">@dimen/common_line_size</item>
+    </style>
+
 </resources>

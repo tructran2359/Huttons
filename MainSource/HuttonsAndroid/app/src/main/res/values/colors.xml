@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="common_orange">#FC2816</color>
+    <color name="bg_act_main_nav">#06203D</color>
+    <color name="bg_act_main_nav_btn_sign_out">#0F2E48</color>
+    <color name="bg_act_main_nav_item_start_color">#23000000</color>
+    <color name="bt_act_main_nav_item_end_color">#00000000</color>
+    <color name="fm_tab_project_blue_selected">#4C74A0</color>
+    <color name="fm_tab_project_blue_unselected">#316197</color>
+
+</resources>

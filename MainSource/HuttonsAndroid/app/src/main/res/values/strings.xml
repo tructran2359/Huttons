@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HuttonsAndroid</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Huttons Property</string>
     <string name="action_settings">Settings</string>
+    <string name="label_new_lauch">NEW LAUNCH</string>
+    <string name="label_overseas">OVERSEAS</string>
+    <string name="label_projects">Projects</string>
+    <string name="label_search_unit">Search Unit</string>
+    <string name="label_notifications">Notifications</string>
+    <string name="label_more">More</string>
+    <string name="label_hello">Hello</string>
+    <string name="label_sign_out">Sign Out</string>
+    <string name="label_announcements">Announcements</string>
+    <string name="label_approved_projects">Approved Projects</string>
+    <string name="label_hms">HMS</string>
+    <string name="label_book_rooms">Book Rooms</string>
+    <string name="label_events">Events</string>
+    <string name="label_your_appointments">Your Appointment</string>
 
 </resources>

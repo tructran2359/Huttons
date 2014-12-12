@@ -7,11 +7,14 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.media2359.huttonsandroid.fragment.TabMoreFragment;
 import com.media2359.huttonsandroid.fragment.TabNotificationFragment;
 import com.media2359.huttonsandroid.fragment.TabProjectFragment;
 import com.media2359.huttonsandroid.fragment.TabSearchFragment;
+import com.media2359.huttonsandroid.helper.CommonHelper;
 
 
 public class MainActivity extends FragmentActivity {
@@ -20,6 +23,7 @@ public class MainActivity extends FragmentActivity {
 
     FragmentTabHost mFragmentTabHost;
     FragmentTabHost.TabSpec mTabProject, mTabSearch, mTabNotification, mTabMore;
+    RelativeLayout mRlSlidingMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +63,6 @@ public class MainActivity extends FragmentActivity {
 
     public void initWidgets() {
         mFragmentTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
-//        mFragmentTabHost.setup(this, getSupportFragmentManager(), R.id.act_main_tab_content);
         mFragmentTabHost.setup(this, getSupportFragmentManager(), android.R.id.tabcontent);
 
         LayoutInflater inflater = LayoutInflater.from(this);
@@ -69,17 +72,14 @@ public class MainActivity extends FragmentActivity {
         mTabProject.setIndicator(vProject);
 
         mTabSearch = mFragmentTabHost.newTabSpec("Search");
-//        mTabSearch.setIndicator("Search", getResources().getDrawable(R.drawable.ic_launcher));
         View vSearch = inflater.inflate(R.layout.tab_search, null);
         mTabSearch.setIndicator(vSearch);
 
         mTabNotification = mFragmentTabHost.newTabSpec("Notification");
-//        mTabNotification.setIndicator("Notification", getResources().getDrawable(R.drawable.ic_launcher));
         View vNoti = inflater.inflate(R.layout.tab_notification, null);
         mTabNotification.setIndicator(vNoti);
 
         mTabMore = mFragmentTabHost.newTabSpec("More");
-//        mTabMore.setIndicator("More", getResources().getDrawable(R.drawable.ic_launcher));
         View vMore = inflater.inflate(R.layout.tab_more, null);
         mTabMore.setIndicator(vMore);
 
@@ -98,6 +98,17 @@ public class MainActivity extends FragmentActivity {
         Bundle bMore = new Bundle();
         bMore.putString(DATA_TO_FRAGMENT, "More");
         mFragmentTabHost.addTab(mTabMore, TabMoreFragment.class, bMore);
+
+        //sliding menu
+        mRlSlidingMenu = (RelativeLayout) findViewById(R.id.act_main_nav_root);
+        int widthScreen = CommonHelper.getWidthScreen(this);
+        if (widthScreen != 0) {
+            int slidingMenuSize = widthScreen * 3 / 4;
+            ViewGroup.LayoutParams params = mRlSlidingMenu.getLayoutParams();
+            params.width = slidingMenuSize;
+            mRlSlidingMenu.setLayoutParams(params);
+        }
+
     }
 
     /**

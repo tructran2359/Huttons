@@ -8,13 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.media2359.huttonsandroid.app.MainActivity;
 import com.media2359.huttonsandroid.app.R;
 
 /**
- * Created by tructran on 12/10/14.
+ * Created by tructran on 12/12/14.
  */
-public class TabNotificationFragment extends Fragment {
+public class TabProjectContentFragment extends Fragment {
 
     private TextView mTvContent;
 
@@ -25,7 +24,8 @@ public class TabNotificationFragment extends Fragment {
 
         Bundle b = getArguments();
         if (b != null) {
-            mTvContent.setText(b.getString(MainActivity.DATA_TO_FRAGMENT, "There is no thing"));
+            String str = b.getString(TabProjectFragment.DATA_BUNDLE, "Nothing");
+            mTvContent.setText(str);
         }
         return v;
     }

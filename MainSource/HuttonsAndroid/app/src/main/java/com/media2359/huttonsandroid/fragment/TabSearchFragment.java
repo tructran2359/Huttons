@@ -20,7 +20,7 @@ public class TabSearchFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fm_tab_project, container, false);
+        View v = inflater.inflate(R.layout.fm_temp, container, false);
         mTvContent = (TextView) v.findViewById(R.id.fm_tab_project_tv_content);
 
         Bundle b = getArguments();
